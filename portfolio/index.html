@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio</title>
+    <link rel ="stylesheet" href ="style.css">
+    <script src="https://kit.fontawesome.com/b1fae5caad.js" crossorigin="anonymous"></script>
+</head>
+<body>
+ <div id="header">
+    <div class ="container">
+        <nav>
+            <img src="D:/portfolio/images/logo0.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <h1>Hi, I'm <span>Revathi</span><br> From India</h1>
+
+        </div>
+    </div>
+    
+ </div>
+<!-----------------about------------>
+ <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user3.png">
+
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About me </h1>
+                <p>I am currently pursuing 3rd year of my bachelors degree(B.TECH) in IT(Information Technology) at SASTRA University</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('languages-known')">Languages-known</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                </div>
+                <div class="tab-contents active-tab" id="education">
+                    <ul>
+                        <li><span>10th</span><br>2018-2019<br>Institution:SR-DIGI School<br>Percentage:</li>
+                        <li><span>12th</span><br>2020-2021<br>Institution:Narayana College<br>Percentage:98.6%</li>
+                        <li><span>Degree</span><br>B.Tech<br>2021-2025<br>Institution:SASTRA University<br>CGPA:7.93</li>
+
+                    </ul>
+                </div>
+                <div class="tab-contents" id="languages-known">
+                    <ul>
+                        <li><span>Telugu  </span>100%</li>
+                        <li><span>English  </span>100%</li>
+                        <li><span>Hindi  </span>100%</li>
+                        <li><span>Tamil  </span>50%</li>
+
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+ </div>
+ <!--skills--> 
+ <div id="skills">
+    <div class="container">
+        <h1 class="sub-title">My Skills</h1>
+        <div class="skills-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Python</h2>
+                <p>Problem solving using python programming and building websites using Django framework</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>DBMS</h2>
+                <p>writing SQL queries and management of data</p>
+                </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>Data Structures and Algorithms</h2>
+                <p>using different data structures to solve problems</p>
+                </div>
+            <div>
+                <i class="fa-brands fa-dribbble"></i>
+                <h2>HTML</h2>
+                <p>website creation using HTML and use of HTML in python based Django projects</p>
+                </div>
+            <div>
+                <i class="fa-solid fa-fire"></i>
+                <h2>Java</h2>
+                <p>problem solving using java programming </p>
+            </div>
+        </div>
+    </div>
+ </div>
+<br><br>
+ <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-center">
+                <center><h1 class="sub-title">Contact Me</h1></center>
+                <center><p><i class="fa-solid fa-paper-plane"></i>drevathi154@gmail.com</p></center>
+                <center><p><i class="fa-solid fa-square-phone-flip"></i>8074644143</p></center>
+                <center><div class="social-icons">
+                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                </center>
+                <br>
+                <br>
+                <center><a href="D:/portfolio/images/resume.pdf" download class="btn btn2">Download Resume</a>
+                </center>
+                <br>
+                <br>
+            </div>
+            
+        </div>
+    </div>
+ </div>
+
+ <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+
+    }
+ </script>
+ <script>
+    var sidemenu=document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right ="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+ </script>
+</body>
+</html>
